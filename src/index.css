@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-hover{
+    @apply hover:bg-black hover:text-white;
+}
+
+.my-container{
+    @apply w-full lg:w-[1080px] mx-auto;
+}

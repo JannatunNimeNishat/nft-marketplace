@@ -17,7 +17,7 @@ const Navbar = () => {
         
     </>
     return (
-        <div className="navbar px-10 py-5 ">
+        <div className="navbar lg:px-10 py-5 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,8 +27,9 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">
-                    <img src={logo} alt="" />
+                <a className="btn btn-ghost normal-case lg:text-xl  mr-2">
+                    <img className='h-6 w-6 block lg:hidden ' src={logo} alt="" />
+                    <img className='hidden lg:block' src={logo} alt="" />
                     <h3>NFT Marketplace</h3>
                 </a>
             </div>
@@ -38,8 +39,11 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/signup' className="btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
+                <Link to='/signup' className="hidden lg:flex btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
                     <img src={user}></img>
+                    <p>Sign Up</p>
+                </Link>
+                <Link to='/signup' className=" flex  lg:hidden  btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
                     <p>Sign Up</p>
                 </Link>
             </div>
