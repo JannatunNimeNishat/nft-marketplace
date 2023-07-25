@@ -17,7 +17,7 @@ import rs from '../../../../public/trending_collection/rs.png'
 const TrendingCollection = () => {
     return (
         <div className=" mt-16 lg:mt-32 my-container px-4 lg:px-0">
-            <h3 className="text-[35px] font-semibold">Trending Collection</h3>
+            <h3 className="text-[38px] font-semibold">Trending Collection</h3>
             <p className=" text-[22px]">Checkout our weekly updated trending collection.</p>
             <div className="mt-[60px] grid grid-cols-1 lg:grid-cols-3 gap-8">
 
