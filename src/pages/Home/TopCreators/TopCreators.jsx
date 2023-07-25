@@ -1,17 +1,17 @@
-import rocket from '../../../../../public/banner/RocketLaunch.png'
+import rocket from '../../../../public/banner/RocketLaunch.png'
 
-import c1 from '../../../../../public/top_creators/c1.png'
-import c2 from '../../../../../public/top_creators/c2.png'
-import c3 from '../../../../../public/top_creators/c3.png'
-import c4 from '../../../../../public/top_creators/c4.png'
-import c5 from '../../../../../public/top_creators/c5.png'
-import c6 from '../../../../../public/top_creators/c6.png'
-import c7 from '../../../../../public/top_creators/c7.png'
-import c8 from '../../../../../public/top_creators/c8.png'
-import c9 from '../../../../../public/top_creators/c9.png'
-import c10 from '../../../../../public/top_creators/c10.png'
-import c11 from '../../../../../public/top_creators/c11.png'
-import c12 from '../../../../../public/top_creators/c12.png'
+import c1 from '../../../../public/top_creators/c1.png'
+import c2 from '../../../../public/top_creators/c2.png'
+import c3 from '../../../../public/top_creators/c3.png'
+import c4 from '../../../../public/top_creators/c4.png'
+import c5 from '../../../../public/top_creators/c5.png'
+import c6 from '../../../../public/top_creators/c6.png'
+import c7 from '../../../../public/top_creators/c7.png'
+import c8 from '../../../../public/top_creators/c8.png'
+import c9 from '../../../../public/top_creators/c9.png'
+import c10 from '../../../../public/top_creators/c10.png'
+import c11 from '../../../../public/top_creators/c11.png'
+import c12 from '../../../../public/top_creators/c12.png'
 
 
 const TopCreators = () => {
@@ -34,7 +34,7 @@ const TopCreators = () => {
                 <div className='bg-[#3B3B3B] rounded-[20px] p-5 flex flex-col items-center justify-center relative'>
                     <img src={c1} alt="" />
                     <h3 className='text-[22px] font-semibold pt-5'>Keepitreal</h3>
-                    <p><span className='text-[#858584] mr-2'>Total Sales</span>34.53 ETH</p>
+                    <p><span className='text-[#858584] mr-2'>Total S        ales</span>34.53 ETH</p>
                     <p className='bg-[#2B2B2B] text-[#858584] w-[25px] rounded-full flex items-center justify-center absolute left-5 top-[22px]'>1</p>
                 </div>
 
