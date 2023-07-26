@@ -7,21 +7,38 @@ import c5 from '../../../../public/browseCategory/c5.png'
 import c6 from '../../../../public/browseCategory/c6.png'
 import c7 from '../../../../public/browseCategory/c7.png'
 import c8 from '../../../../public/browseCategory/c8.png'
-
+import {motion} from 'framer-motion'
 const BrowseCategory = () => {
     return (
         <div className="my-container mt-32 px-5 lg:px-0">
-            <h3>Browse Categories</h3>
+            <h3 className="text-[28px] lg:text-[38px] font-semibold">Browse Categories</h3>
 
             <div className="pt-12 grid grid-cols-1 lg:grid-cols-4 gap-7">
 
                 {/* 1st */}
-                <div>
+                <motion.div
+                initial={{x:-100}}git
+                animate={{x:0, rotate:360}}
+                // animate={{x:0}}
+                transition={{
+                    delay:1, 
+                    duration:.5,
+                    type:'spring',
+                    bounce:0.4
+                }}
+                >
                     <img className=' w-full' src={c1} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Art</h3>
                     </div>
-                </div>
+                </motion.div>
+               
+                {/* <div>
+                    <img className=' w-full' src={c1} alt="" />
+                    <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
+                        <h3 className='text-[22px] font-semibold'>Art</h3>
+                    </div>
+                </div> */}
 
                 {/* 2nd */}
                 <div>
@@ -46,6 +63,7 @@ const BrowseCategory = () => {
                         <h3 className='text-[22px] font-semibold'>Photography</h3>
                     </div>
                 </div>
+
                 {/* 5th */}
                 <div>
                     <img className=' w-full' src={c5} alt="" />
@@ -53,6 +71,7 @@ const BrowseCategory = () => {
                         <h3 className='text-[22px] font-semibold'>Video</h3>
                     </div>
                 </div>
+
                 {/* 6th */}
                 <div>
                     <img className=' w-full' src={c6} alt="" />
@@ -60,6 +79,7 @@ const BrowseCategory = () => {
                         <h3 className='text-[22px] font-semibold'>Utility</h3>
                     </div>
                 </div>
+
                 {/* 7th */}
                 <div>
                     <img className=' w-full' src={c7} alt="" />
@@ -67,6 +87,7 @@ const BrowseCategory = () => {
                         <h3 className='text-[22px] font-semibold'>Sport</h3>
                     </div>
                 </div>
+
                 {/* 8th */}
                 <div>
                     <img className=' w-full' src={c8} alt="" />
@@ -79,6 +100,7 @@ const BrowseCategory = () => {
 
 
             </div>
+
         </div>
     );
 };
