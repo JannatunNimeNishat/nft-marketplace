@@ -4,6 +4,7 @@ import TopCreators from "../TopCreators/TopCreators";
 import BrowseCategory from "../BrowseCategory/BrowseCategory";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import DiscoverMoreNFTs from "../DiscoverMoreNFTs/DiscoverMoreNFTs";
+import WeeklyDigest from "./WeeklyDigest/WeeklyDigest";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
            <BrowseCategory></BrowseCategory>
            <DiscoverMoreNFTs></DiscoverMoreNFTs>
            <HowItWorks></HowItWorks>
+           <WeeklyDigest></WeeklyDigest>
         </div>
     );
 };
