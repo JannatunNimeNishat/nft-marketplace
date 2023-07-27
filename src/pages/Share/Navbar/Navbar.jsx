@@ -12,7 +12,7 @@ const Navbar = () => {
             <NavLink className={'hover:text-white hover:font-semibold'} to='/rankings'>Rankings</NavLink>
         </li>
         <li>
-            <NavLink className={'hover:text-white hover:font-semibold'} to={'/connect_a_wallet'}>Connect a wallet</NavLink>
+            <NavLink className={'hover:text-white hover:font-semibold'} to='/connect-a-Wallet'>Connect a wallet</NavLink>
         </li>
         
     </>
@@ -27,11 +27,11 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case lg:text-xl  mr-2">
+                <Link to='/' className="btn btn-ghost normal-case lg:text-xl  mr-2">
                     <img className='h-6 w-6 block lg:hidden ' src={logo} alt="" />
                     <img className='hidden lg:block' src={logo} alt="" />
                     <h3>NFT Marketplace</h3>
-                </a>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
