@@ -5,6 +5,7 @@ import {
 import Main from "../layout/Main";
 import Home from "../pages/Home/Home/Home";
 import ConnectAWallate from "../pages/ConnectAWallate/ConnectAWallate";
+import SignUp from "../pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         {
           path:'/connect-a-Wallet',
           element:<ConnectAWallate></ConnectAWallate>
+        },
+        {
+          path:'/signup',
+          element:<SignUp></SignUp>
         }
       ]
     },
