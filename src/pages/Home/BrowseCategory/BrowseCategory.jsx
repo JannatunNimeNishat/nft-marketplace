@@ -17,7 +17,7 @@ const BrowseCategory = () => {
 
                 {/* 1st */}
                 <motion.div
-                initial={{x:-100}}git
+                initial={{x:-100}}
                 animate={{x:0, rotate:360}}
                 // animate={{x:0}}
                 transition={{
