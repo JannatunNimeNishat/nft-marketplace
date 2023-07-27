@@ -3,6 +3,7 @@ import TrendingCollection from "../TrendingCollection/TrendingCollection";
 import TopCreators from "../TopCreators/TopCreators";
 import BrowseCategory from "../BrowseCategory/BrowseCategory";
 import HowItWorks from "../HowItWorks/HowItWorks";
+import DiscoverMoreNFTs from "../DiscoverMoreNFTs/DiscoverMoreNFTs";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
            <TrendingCollection></TrendingCollection>
            <TopCreators></TopCreators>
            <BrowseCategory></BrowseCategory>
+           <DiscoverMoreNFTs></DiscoverMoreNFTs>
            <HowItWorks></HowItWorks>
         </div>
     );
