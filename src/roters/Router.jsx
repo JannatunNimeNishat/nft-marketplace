@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home/Home";
 import ConnectAWallate from "../pages/ConnectAWallate/ConnectAWallate";
 import SignUp from "../pages/SignUp/SignUp";
 import SignIn from "../pages/SignIn/SignIn";
+import Marketplace from "../pages/Marketplace/Marketplace";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         {
           path:'/signUp',
           element:<SignUp></SignUp>
+        },
+        {
+          path:'/marketplace',
+          element:<Marketplace></Marketplace>
         }
       ]
     },
