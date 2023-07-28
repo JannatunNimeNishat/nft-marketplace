@@ -39,12 +39,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/signup' className="hidden lg:flex btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
+                <Link to='/signIn' className="hidden lg:flex btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
                     <img src={user}></img>
-                    <p>Sign Up</p>
+                    <p>Sign In</p>
                 </Link>
-                <Link to='/signup' className=" flex  lg:hidden  btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
-                    <p>Sign Up</p>
+                <Link to='/signIn' className=" flex  lg:hidden  btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
+                    <p>Sign In</p>
                 </Link>
             </div>
         </div>

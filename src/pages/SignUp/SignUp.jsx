@@ -2,10 +2,11 @@ import signUpHero from '../../assets/signUp/signUp_hero_img.png'
 import user from '../../assets/signUp/User.png'
 import email from '../../assets/signUp/email.png'
 import lock from '../../assets/signUp/LockKey.png'
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     return (
-        <div className='gap:flex gap-16'>
+        <div className='lg:flex gap-16'>
             <figure>
                 <img src={signUpHero} alt="" />
             </figure>
@@ -16,28 +17,29 @@ const SignUp = () => {
                 <div className=' bg-white text-black pt-3 pr-[40px] pb-3 pl-[40px] rounded-[20px]  flex  items-center gap-3 border '>
                     <img className='h-full' src={user} alt="" />
                     <input type="text" name="" id="" placeholder='Username' />
-                    
+
                 </div>
                 <div className=' mt-4 bg-white text-black pt-3 pr-[40px] pb-3 pl-[40px] rounded-[20px]  flex  items-center gap-3 border '>
                     <img className='h-full' src={email} alt="" />
                     <input type="email" name="" id="" placeholder='Email Address' />
-                    
+
                 </div>
 
                 <div className=' mt-4 bg-white text-black pt-3 pr-[40px] pb-3 pl-[40px] rounded-[20px]  flex  items-center gap-3 border '>
                     <img className='h-full' src={lock} alt="" />
                     <input type="password" name="" id="" placeholder='Password' />
-                    
+
                 </div>
 
                 <div className=' mt-4 bg-white text-black pt-3 pr-[40px] pb-3 pl-[40px] rounded-[20px]  flex  items-center gap-3 border '>
                     <img className='h-full' src={lock} alt="" />
                     <input type="password" name="" id="" placeholder='Confirm Password' />
-                    
+
                 </div>
 
-               <input className='mt-[30px] w-full h-[46px] bg-[#A259FF] font-semibold rounded-[20px] cursor-pointer' type="submit" value="Create account" />
+                <input className='mt-[30px] w-full h-[46px] bg-[#A259FF] font-semibold rounded-[20px] cursor-pointer' type="submit" value="Create account" />
 
+                <p className='pt-2 text-right'><small>Already have an account ? please <Link to='/signIn' className='text-[#A259FF] font-bold'>SignIn</Link></small></p>
 
             </div>
         </div>
