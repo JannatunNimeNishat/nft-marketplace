@@ -9,6 +9,7 @@ import SignUp from "../pages/SignUp/SignUp";
 import SignIn from "../pages/SignIn/SignIn";
 import Marketplace from "../pages/Marketplace/Marketplace";
 import Rankings from "../pages/Rankings/Rankings";
+import ArtistPage from "../pages/ArtistPage/ArtistPage";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         {
           path:'/rankings',
           element:<Rankings></Rankings>
+        },
+        {
+          path:'/artist_page/:id',
+          element:<ArtistPage></ArtistPage>
         }
       ]
     },
