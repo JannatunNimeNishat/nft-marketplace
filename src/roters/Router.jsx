@@ -8,6 +8,7 @@ import ConnectAWallate from "../pages/ConnectAWallate/ConnectAWallate";
 import SignUp from "../pages/SignUp/SignUp";
 import SignIn from "../pages/SignIn/SignIn";
 import Marketplace from "../pages/Marketplace/Marketplace";
+import Rankings from "../pages/Rankings/Rankings";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         {
           path:'/marketplace',
           element:<Marketplace></Marketplace>
+        },
+        {
+          path:'/rankings',
+          element:<Rankings></Rankings>
         }
       ]
     },
