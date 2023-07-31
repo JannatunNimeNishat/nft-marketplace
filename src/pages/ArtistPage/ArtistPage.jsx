@@ -15,6 +15,7 @@ const ArtistPage = () => {
 
 
     const [singleArtistInfo, setSingleArtistInfo] = useState()
+    const [activeTab, setActiveTab] = useState(1);
 
     useEffect(() => {
         fetch('../../../public/json/artists.json')
@@ -35,6 +36,8 @@ const ArtistPage = () => {
             </figure>
 
             <div className="my-container">
+
+                {/* hero */}
                 <figure className="-mt-16">
                     <img className="rounded-r-lg" src={singleArtistInfo?.artist_img} alt="" />
                 </figure>
@@ -104,10 +107,85 @@ const ArtistPage = () => {
 
                         </div>
                     </div>
+                    {/* tab heads */}
+                    <div className="mt-[40px] flex justify-between  gap-8 lg:gap-3 w-11/12  lg:w-full  mx-auto">
+                        {/* created */}
+                        <div className='cursor-pointer' onClick={() => setActiveTab(1)}>
+
+                            <div className='flex gap-3 items-center justify-center lg:w-[262px] h-[60px]'>
+                                <h3 className={`hidden lg:block text-[16px] lg:text-[22px] ${activeTab === 1 ? '' : 'text-[#858584]'}`}>Created</h3>
+
+                                <div className={`hidden lg:block badge  text-white border-0  
+                                ${activeTab === 1 ? 'bg-[#858584]' : 'bg-[#3B3B3B]'}
+                                `}>302</div>
+
+                             
+                            </div>
+                            <div className={`
+                                    h-[2px] w-full bg-[#858584]
+                                    ${activeTab === 1 ?
+                                    'block'
+                                    :
+                                    'hidden'
+                                }
+                                `}>
+
+                            </div>
+                        </div>
+
+                        {/* Owned */}
+                        <div className='cursor-pointer' onClick={() => setActiveTab(2)}>
+
+                            <div className='flex gap-3  items-center justify-center lg:w-[262px] h-[60px]'>
+                                <h3 className={`hidden lg:block text-[16px] lg:text-[22px] ${activeTab === 2 ? '' : 'text-[#858584]'}`}>Owned</h3>
+
+                                <div className={`hidden lg:block badge  text-white border-0  
+                                ${activeTab === 2 ? 'bg-[#858584]' : 'bg-[#3B3B3B]'}
+                                `}>67</div>
+
+                              
+                            </div>
+                            <div className={`
+                                    h-[2px] w-full bg-[#858584]
+                                    ${activeTab === 2 ?
+                                    'block'
+                                    :
+                                    'hidden'
+                                }
+                                `}>
+
+                            </div>
+                        </div>
+
+                        {/* Collection */}
+                        <div className='cursor-pointer' onClick={() => setActiveTab(3)}>
+
+                            <div className='flex gap-3 items-center justify-center lg:w-[262px] h-[60px]'>
+                                <h3 className={`hidden lg:block text-[16px] lg:text-[22px] ${activeTab === 3 ? '' : 'text-[#858584]'}`}>Collection</h3>
+                                <div className={`hidden lg:block badge  text-white border-0  
+                                ${activeTab === 4 ? 'bg-[#858584]' : 'bg-[#3B3B3B]'}
+                                `}>302</div>
+                               
+                            </div>
+                            <div className={`
+                                    h-[2px] w-full bg-[#858584]
+                                    ${activeTab === 3 ?
+                                    'block'
+                                    :
+                                    'hidden'
+                                }
+                                `}>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
                 </div>
-
-
             </div>
+
+
 
 
         </div>
