@@ -100,7 +100,7 @@ const Rankings = () => {
                         'hidden'
                     }
                 `}>
-                    <table className="table text-white ">
+                    <table className="table-sm lg:table text-white ">
                         {/* head */}
                         <thead className="text-[#858584]">
 
