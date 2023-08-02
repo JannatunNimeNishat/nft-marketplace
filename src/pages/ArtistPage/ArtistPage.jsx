@@ -66,7 +66,7 @@ const ArtistPage = () => {
                                 <p>0xc{singleArtistInfo?.artist_name}</p>
                             </button>
 
-                            <button className="mt-5 w-full lg:w-[168px] h-[60px] rounded-[20px] border-2 border-[#A259FF] font-bold flex items-center justify-center gap-2">
+                            <button className="mt-5 lg:mt-0 w-full lg:w-[168px] h-[60px] rounded-[20px] border-2 border-[#A259FF] font-bold flex items-center justify-center gap-2">
                                 <img src={plus} alt="" />
                                 <p>Follow</p>
                             </button>
