@@ -20,7 +20,7 @@ const Banner = () => {
                     </p>
 
                     <p className=' block mt-3 lg:mt-5 '>
-                        NFT marketplace UI created with Anima for  Figma. Collect, buy and sell art from more than 20k NFT artists.
+                        NFT marketplace UI created with Anima for <br />  Figma. Collect, buy and sell art from more <br /> than 20k NFT artists.
                     </p>
 
                     <button className='my-[30px] bg-[#A259FF] rounded-[20px] px-[50px] hidden lg:flex items-center gap-2 h-[60px] btn-hover'>
