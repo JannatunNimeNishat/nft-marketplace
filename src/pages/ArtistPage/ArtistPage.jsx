@@ -432,7 +432,7 @@ const ArtistPage = () => {
 
 
                     </div>
-                    {/* NFTs  cards */}
+                    {/*  NFTs Owned  cards */}
                     <div className={`
                 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:w-[1000px] pt-5 mx-auto
                 ${activeTab === 2 ?
@@ -660,6 +660,237 @@ const ArtistPage = () => {
                             </div>
                         </div>
 
+
+
+                    </div>
+                    {/*  NFTs Collection  cards */}
+                    <div className={`
+                grid grid-cols-1 lg:grid-cols-3 gap-8 lg:w-[1000px] pt-5 mx-auto
+                ${activeTab === 3 ?
+                            'block'
+                            :
+                            'hidden'
+                        }
+                
+                `}>
+
+                        {/* 4th */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m4} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Designer Bear</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* 5th */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m5} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Colorful Dog 0356</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* 6th */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m12} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Dancing Robot 0312</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* 1st */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m1} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Magic Mushroom 0325</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* 2nd */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m2} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Happy Robot 032</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* 3rd */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m3} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Happy Robot 024</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 7th */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m6} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Cherry Blossom Girl 035</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* 8th */}
+                        <div className='bg-[#2b2b2b] rounded-[20px]'>
+
+                            <figure className='w-full h-[296px] '>
+                                <img className='w-full h-full' src={m7} alt="" />
+                            </figure>
+
+                            <div className='px-7 pt-5 pb-6'>
+
+                                <h3 className='text-[22px] font-semibold'>Space Travel</h3>
+
+                                <div className='flex items-center gap-2 pt-[5px]'>
+                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
+                                    <p>{singleArtistInfo?.artist_name}</p>
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='flex justify-between text-[#858584]'>
+                                        <small>Price</small>
+                                        <small>Highest Bid</small>
+                                    </p>
+                                    <div className='flex justify-between'>
+                                        <p>1.63 ETH</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
                     </div>
