@@ -5,7 +5,7 @@ import rocket from '../../../../public/banner/RocketLaunch.png'
 
 const Banner = () => {
     return (
-        <div className="mt-8  px-5 lg:px-0 my-container">
+        <div className="mt-10  px-5 lg:px-0 my-container">
             <div className="rounded-md lg:flex">
                 {/* <div className="w-[1200px] px-10   rounded-md flex   text-center"> */}
                 <div className='w-full lg:w-1/2 '>
