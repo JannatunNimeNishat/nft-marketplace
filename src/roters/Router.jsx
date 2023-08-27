@@ -10,11 +10,13 @@ import SignIn from "../pages/SignIn/SignIn";
 import Marketplace from "../pages/Marketplace/Marketplace";
 import Rankings from "../pages/Rankings/Rankings";
 import ArtistPage from "../pages/ArtistPage/ArtistPage";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement:<ErrorPage/>,
       children:[
         {
             path:'/',
