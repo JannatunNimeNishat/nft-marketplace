@@ -27,9 +27,9 @@ const Footer = () => {
                     <div className='w-full'>
                         <span className='text-2xl font-semibold'>Explore</span>
                         <div className='flex flex-col pt-6'>
-                            <Link className='text-[#CCC] '>Marketplace</Link>
-                            <Link className='text-[#CCC] pt-5'>Ranking</Link>
-                            <Link className='text-[#CCC] pt-5'>Connect a wallet</Link>
+                            <Link to='/marketplace' className='text-[#CCC] '>Marketplace</Link>
+                            <Link to='/rankings' className='text-[#CCC] pt-5'>Ranking</Link>
+                            <Link to='/connect-a-Wallet' className='text-[#CCC] pt-5'>Connect a wallet</Link>
                         </div>
                     </div>
 
