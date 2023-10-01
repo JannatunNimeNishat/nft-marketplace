@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useDataFetching from "../../hooks/useDataFetching";
 
 
 
 const Rankings = () => {
     const [activeTab, setActiveTab] = useState(1);
-    const [artists, setArtists] = useState([])
-    useEffect(() => {
+    const [artists, setArtists] = useState([]);
+    const [data, loading, error] = useDataFetching('http://localhost:5000/artists')
+
+
+   /*  useEffect(() => {
         fetch('../../../public/json/artists.json')
             .then(res => res.json())
             .then(data => setArtists(data))
-    }, [])
+    }, []) */
+
+
+
     return (
         <div className="lg:w-[1000px]  lg:py-[50px] mx-auto px-5 lg:px-0 ">
             <h3 className="text-[22px] lg:text-[51px] font-bold">Top Creators</h3>
@@ -119,8 +126,9 @@ const Rankings = () => {
 
 
                             {/* row 1 */}
-                            {artists.map((singleArtist, index) => <>
-                                <br key={index}/>
+                            {/* {artists.map((singleArtist, index) => <> */}
+                            {data?.map((singleArtist, index) => <>
+                                <br key={index} />
                                 <tr className="bg-[#3B3B3B] ">
                                     <th className="">
                                         <p className="bg-[#2B2B2B] text-[#858584] rounded-full w-[30px] h-[30px] flex items-center justify-center">{index + 1}</p>
@@ -186,9 +194,9 @@ const Rankings = () => {
 
                             <br />
                             {/* row 1 */}
-                            {artists.slice(2,5).map((singleArtist, index) => <>
+                            {data.slice(2, 5).map((singleArtist, index) => <>
                                 <br key={index} />
-                                <tr  className="bg-[#3B3B3B] ">
+                                <tr className="bg-[#3B3B3B] ">
                                     <th className="">
                                         <p className="bg-[#2B2B2B] text-[#858584] rounded-full w-[30px] h-[30px] flex items-center justify-center">{index + 1}</p>
                                     </th>
@@ -252,11 +260,11 @@ const Rankings = () => {
                         </thead>
                         <tbody>
 
-                           
+
                             {/* row 1 */}
-                            {artists.slice(3,5).map((singleArtist, index) => <>
-                                <br key={index}/>
-                                <tr  className="bg-[#3B3B3B] ">
+                            {data.slice(3, 5).map((singleArtist, index) => <>
+                                <br key={index} />
+                                <tr className="bg-[#3B3B3B] ">
                                     <th className="">
                                         <p className="bg-[#2B2B2B] text-[#858584] rounded-full w-[30px] h-[30px] flex items-center justify-center">{index + 1}</p>
                                     </th>
@@ -288,7 +296,7 @@ const Rankings = () => {
 
                                 </tr>
                             </>)}
-                           
+
 
 
                         </tbody>
@@ -321,11 +329,11 @@ const Rankings = () => {
                         </thead>
                         <tbody>
 
-                           
+
                             {/* row 1 */}
-                            {artists.slice(0,3).map((singleArtist, index) => <>
-                                <br key={index}/>
-                                <tr  className="bg-[#3B3B3B] ">
+                            {data.slice(0, 3).map((singleArtist, index) => <>
+                                <br key={index} />
+                                <tr className="bg-[#3B3B3B] ">
                                     <th className="">
                                         <p className="bg-[#2B2B2B] text-[#858584] rounded-full w-[30px] h-[30px] flex items-center justify-center">{index + 1}</p>
                                     </th>
@@ -357,8 +365,8 @@ const Rankings = () => {
 
                                 </tr>
                             </>)}
-                          
-                           
+
+
 
 
                         </tbody>

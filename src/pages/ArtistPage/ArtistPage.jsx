@@ -20,26 +20,17 @@ import m5 from '../../assets/marketplace/m5.png'
 import m6 from '../../assets/marketplace/m6.png'
 import m7 from '../../assets/marketplace/m7.png'
 import m12 from '../../assets/marketplace/m12.png'
+import useDataFetching from "../../hooks/useDataFetching";
 
 const ArtistPage = () => {
 
-    const artist_id = useParams()
-
-
-    const [singleArtistInfo, setSingleArtistInfo] = useState()
+    const artist_id = useParams();
+    console.log(artist_id);
+    const [data] = useDataFetching(`http://localhost:5000/artists/${artist_id?.id}`);
     const [activeTab, setActiveTab] = useState(1);
 
-    useEffect(() => {
-        fetch('../../../public/json/artists.json')
-            .then(res => res.json())
-            .then(data => {
+    console.log(data);
 
-                const singleData = data.find(singleArtist => singleArtist._id === parseInt(artist_id?.id))
-
-                setSingleArtistInfo(singleData)
-            })
-    }, [])
-    console.log(singleArtistInfo);
 
     return (
         <div>
@@ -51,19 +42,20 @@ const ArtistPage = () => {
 
                 {/* hero */}
                 <figure className="-mt-16 w-1/2 lg:w-full  mx-auto">
-                    <img className=" border-2 border-black rounded-full" src={singleArtistInfo?.artist_img} alt="" />
+                    <img className=" border-2 border-black rounded-full" src={data?.artist_img} alt="" />
                 </figure>
+
 
                 <div className="mt-[20px] lg:mt-[40px] px-5 lg:px-0">
                     {/* profile */}
                     <div className="lg:flex items-center justify-between">
 
-                        <h3 className="text-[28px] lg:text-[51px] font-bold">{singleArtistInfo?.artist_name}</h3>
+                        <h3 className="text-[28px] lg:text-[51px] font-bold">{data?.artist_name}</h3>
 
                         <div className="lg:flex gap-5 mt-[30px]">
                             <button className="w-full lg:w-[168px] h-[60px] rounded-[20px] bg-[#A259FF] font-bold flex items-center justify-center gap-2">
                                 <img src={copy} alt="" />
-                                <p>0xc{singleArtistInfo?.artist_name}</p>
+                                <p>0xc{data?.artist_name}</p>
                             </button>
 
                             <button className="mt-5 lg:mt-0 w-full lg:w-[168px] h-[60px] rounded-[20px] border-2 border-[#A259FF] font-bold flex items-center justify-center gap-2">
@@ -75,22 +67,22 @@ const ArtistPage = () => {
                     {/* info */}
                     <div className="mt-10 flex gap-5 justify-between lg:justify-normal">
                         <div>
-                            <h3 className="text-[22px] lg:text-[28px] font-bold">{singleArtistInfo?.volume}+</h3>
+                            <h3 className="text-[22px] lg:text-[28px] font-bold">{data?.volume}+</h3>
                             <p className="lg:text-[22px]">Volume</p>
                         </div>
                         <div>
-                            <h3 className="text-[22px] lg:text-[28px] font-bold">{singleArtistInfo?.nfts_sold}+</h3>
+                            <h3 className="text-[22px] lg:text-[28px] font-bold">{data?.nfts_sold}+</h3>
                             <p className="lg:text-[22px]">NFTs Sold</p>
                         </div>
                         <div>
-                            <h3 className="text-[22px] lg:text-[28px] font-bold">{singleArtistInfo?.followers}+</h3>
+                            <h3 className="text-[22px] lg:text-[28px] font-bold">{data?.followers}+</h3>
                             <p className="lg:text-[22px]">Followers</p>
                         </div>
                     </div>
                     {/* bio */}
                     <div className="mt-10">
                         <h3 className="text-[#858584] lg:text-[22px] font-bold">Bio</h3>
-                        <p className=" lg:text-[22px]">{singleArtistInfo?.bio}</p>
+                        <p className=" lg:text-[22px]">{data?.bio}</p>
                     </div>
 
                     {/* Links */}
@@ -100,18 +92,22 @@ const ArtistPage = () => {
                             <Link to={'#'}>
                                 <img src={web} alt="" />
                             </Link>
-                            <Link to={`${singleArtistInfo?.links?.discord_link}`}>
+                            <Link to={`#`}>
+                                {/* <Link to={`${data?.links?.discord_link}`}> */}
                                 <img src={discordLogo} alt="" />
                             </Link>
-                            <Link to={`${singleArtistInfo?.links?.youtube_link}`}>
+                            <Link to={`#`}>
+                                {/* <Link to={`${data?.links?.youtube_link}`}> */}
                                 <img src={youtubeLogo} alt="" />
                             </Link>
-                            <Link to={`${singleArtistInfo?.links?.tweeter_link}`}>
+                            <Link to={`#`}>
+                                {/* <Link to={`${data?.links?.tweeter_link}`}> */}
                                 <img src={tweeterLogo} alt="" />
 
                             </Link>
 
-                            <Link to={`${singleArtistInfo?.links?.instagram_link}`}>
+                            <Link to={`#`}>
+                                {/* <Link to={`${data?.links?.instagram_link}`}> */}
 
                                 <img src={instaLogo} alt="" />
 
@@ -225,8 +221,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Magic Mushroom 0325</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -252,8 +248,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Happy Robot 032</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -279,8 +275,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Happy Robot 024</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -306,8 +302,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Designer Bear</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -333,8 +329,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Colorful Dog 0356</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -360,8 +356,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Dancing Robot 0312</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -387,8 +383,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Cherry Blossom Girl 035</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -414,8 +410,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Space Travel</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -455,8 +451,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Dancing Robot 0312</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -482,8 +478,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Cherry Blossom Girl 035</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -509,8 +505,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Space Travel</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -536,8 +532,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Magic Mushroom 0325</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -563,8 +559,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Happy Robot 032</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -590,8 +586,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Happy Robot 024</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -617,8 +613,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Designer Bear</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -644,8 +640,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Colorful Dog 0356</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -686,8 +682,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Designer Bear</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -713,8 +709,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Colorful Dog 0356</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -740,8 +736,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Dancing Robot 0312</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -767,8 +763,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Magic Mushroom 0325</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -794,8 +790,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Happy Robot 032</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -821,8 +817,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Happy Robot 024</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -849,8 +845,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Cherry Blossom Girl 035</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -876,8 +872,8 @@ const ArtistPage = () => {
                                 <h3 className='text-[22px] font-semibold'>Space Travel</h3>
 
                                 <div className='flex items-center gap-2 pt-[5px]'>
-                                    <img className="h-[24px] w-[24px]" src={singleArtistInfo?.artist_img} alt="" />
-                                    <p>{singleArtistInfo?.artist_name}</p>
+                                    <img className="h-[24px] w-[24px]" src={data?.artist_img} alt="" />
+                                    <p>{data?.artist_name}</p>
                                 </div>
                                 <div className='mt-5'>
                                     <p className='flex justify-between text-[#858584]'>
@@ -891,18 +887,7 @@ const ArtistPage = () => {
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
 
