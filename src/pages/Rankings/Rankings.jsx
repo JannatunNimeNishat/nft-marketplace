@@ -10,13 +10,6 @@ const Rankings = () => {
     const [data, loading, error] = useDataFetching('http://localhost:5000/artists')
 
 
-   /*  useEffect(() => {
-        fetch('../../../public/json/artists.json')
-            .then(res => res.json())
-            .then(data => setArtists(data))
-    }, []) */
-
-
 
     return (
         <div className="lg:w-[1000px]  lg:py-[50px] mx-auto px-5 lg:px-0 ">
