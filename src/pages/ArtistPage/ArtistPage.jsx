@@ -22,15 +22,22 @@ import m7 from '../../assets/marketplace/m7.png'
 import m12 from '../../assets/marketplace/m12.png'
 import useDataFetching from "../../hooks/useDataFetching";
 
+import Loading from "../Loading/Loading";
+
+
+
 const ArtistPage = () => {
 
     const artist_id = useParams();
     console.log(artist_id);
-    const [data] = useDataFetching(`http://localhost:5000/artists/${artist_id?.id}`);
+    const [data,loading] = useDataFetching(`http://localhost:5000/artists/${artist_id?.id}`);
     const [activeTab, setActiveTab] = useState(1);
 
     console.log(data);
 
+    if(loading){
+        return <Loading/>
+    }
 
     return (
         <div>

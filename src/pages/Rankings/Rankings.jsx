@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useDataFetching from "../../hooks/useDataFetching";
+import Loading from "../Loading/Loading";
 
 
 
@@ -9,7 +10,9 @@ const Rankings = () => {
     const [artists, setArtists] = useState([]);
     const [data, loading, error] = useDataFetching('http://localhost:5000/artists')
 
-
+    if (loading) {
+        return <Loading />
+    }
 
     return (
         <div className="lg:w-[1000px]  lg:py-[50px] mx-auto px-5 lg:px-0 ">
@@ -119,7 +122,7 @@ const Rankings = () => {
 
 
                             {/* row 1 */}
-                            {/* {artists.map((singleArtist, index) => <> */}
+                            {/* loading */}
                             {data?.map((singleArtist, index) => <>
                                 <br key={index} />
                                 <tr className="bg-[#3B3B3B] ">

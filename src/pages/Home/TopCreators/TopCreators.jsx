@@ -16,11 +16,11 @@ import useDataFetching from '../../../hooks/useDataFetching'
 import { Link } from 'react-router-dom'
 
 
+
 const TopCreators = () => {
 
     const [data] = useDataFetching('http://localhost:5000/artists')
-    console.log(data);
-    data.map(item => console.log(item.artist_name))
+   
 
     return (
         <div className="my-container mt-32 px-5 lg:px-0">
