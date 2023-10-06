@@ -31,7 +31,7 @@ const TopCreators = () => {
                 </div>
 
                 <Link to={'/rankings'}>
-                    <button className='  hover:bg-black hover:border-black hover:text-white hidden lg:flex gap-3 items-center border border-[#A259FF] rounded-[20px] h-[60px] px-[50px]'>
+                    <button className='  hover:bg-black hover:border-black hover:text-white hidden lg:flex gap-3 items-center border border-[#A259FF] rounded-[20px] h-[60px] px-[50px] my-hover-effect'>
                         <img src={rocket} alt="" />
                         <p className='text-[16px] font-semibold'>View Rankings</p>
                     </button>
@@ -43,7 +43,7 @@ const TopCreators = () => {
                 {
                     data?.map((item, index) => <div
                         key={item._id}
-                        className='bg-[#3B3B3B] rounded-[20px] p-5 flex flex-col items-center justify-center relative'
+                        className='bg-[#3B3B3B] rounded-[20px] p-5 flex flex-col items-center justify-center relative my-hover-effect'
                     >
                         <img src={item?.artist_img} alt="" />
                         <h3 className='text-[22px] font-semibold pt-5'>{item?.artist_name}</h3>

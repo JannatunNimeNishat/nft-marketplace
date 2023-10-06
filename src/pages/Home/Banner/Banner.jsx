@@ -23,7 +23,9 @@ const Banner = () => {
                         NFT marketplace UI created with Anima for <br />  Figma. Collect, buy and sell art from more <br /> than 20k NFT artists.
                     </p>
 
-                    <button className='my-[30px] bg-[#A259FF] rounded-[20px] px-[50px] hidden lg:flex items-center gap-2 h-[60px] btn-hover'>
+                    <button className='my-[30px] bg-[#A259FF] rounded-[20px] px-[50px] hidden lg:flex items-center gap-2 h-[60px] 
+                    btn-hover my-hover-effect
+                    '>
                         <img src={rocket}></img>
                         <p className='font-semibold'>Get Started</p>
                     </button>

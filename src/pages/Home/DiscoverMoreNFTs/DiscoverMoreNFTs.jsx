@@ -25,7 +25,7 @@ const DiscoverMoreNFTs = () => {
             <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
                 {/* 1st */}
-                <div className='bg-[#3b3b3b] rounded-[20px]'>
+                <div className='bg-[#3b3b3b] rounded-[20px] my-hover-effect'>
 
                     <figure className='w-full h-[296px] '>
                         <img className='w-full h-full' src={d1} alt="" />
@@ -52,7 +52,7 @@ const DiscoverMoreNFTs = () => {
                     </div>
                 </div>
                 {/* 2nd */}
-                <div className='bg-[#3b3b3b] rounded-[20px]'>
+                <div className='bg-[#3b3b3b] rounded-[20px] my-hover-effect'>
 
                     <figure className='w-full h-[296px] '>
                         <img className='w-full h-full' src={d2} alt="" />
@@ -79,7 +79,7 @@ const DiscoverMoreNFTs = () => {
                     </div>
                 </div>
                 {/* 3rd */}
-                <div className='bg-[#3b3b3b] rounded-[20px]'>
+                <div className='bg-[#3b3b3b] rounded-[20px] my-hover-effect'>
 
                     <figure className='w-full h-[296px] '>
                         <img className='w-full h-full' src={d3} alt="" />

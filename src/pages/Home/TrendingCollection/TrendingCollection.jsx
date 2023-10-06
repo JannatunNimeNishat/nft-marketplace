@@ -22,14 +22,16 @@ const TrendingCollection = () => {
             <div className="mt-[60px] grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                 {/* 1st */}
-                <div className='pt-5 lg:pt-0'>
+                <div className='pt-5 lg:pt-0 
+                
+                '>
                     <figure>
-                        <img className='object-cover  w-full'  src={d1} alt="" />
+                        <img className='object-cover  w-full my-hover-effect'  src={d1} alt="" />
                     </figure>
                     <div className='grid grid-cols-3 gap-2 lg:gap-0 pt-[15px] '>
-                        <img src={d2} alt="" />
-                        <img src={d3} alt="" />
-                        <p className='  bg-[#A259FF] rounded-[20px] text-2xl font-bold flex justify-center items-center'>
+                        <img className='my-hover-effect' src={d2} alt="" />
+                        <img className='my-hover-effect' src={d3} alt="" />
+                        <p className='my-hover-effect  bg-[#A259FF] rounded-[20px] text-2xl font-bold flex justify-center items-center'>
                             1025+
                         </p>
                     </div>
@@ -45,12 +47,12 @@ const TrendingCollection = () => {
                 {/* 2nd */}
                 <div className='pt-5 lg:pt-0'>
                     <figure>
-                        <img className='object-cover  w-full'  src={m1} alt="" />
+                        <img className='object-cover  w-full my-hover-effect'  src={m1} alt="" />
                     </figure>
                     <div className='grid grid-cols-3 gap-2 lg:gap-0 pt-[15px] '>
-                        <img src={m2} alt="" />
-                        <img src={m3} alt="" />
-                        <p className='  bg-[#A259FF] rounded-[20px] text-2xl font-bold flex justify-center items-center'>
+                        <img className='my-hover-effect' src={m2} alt="" />
+                        <img className='my-hover-effect' src={m3} alt="" />
+                        <p className='  bg-[#A259FF] rounded-[20px] text-2xl font-bold flex justify-center items-center my-hover-effect'>
                             1025+
                         </p>
                     </div>
@@ -65,12 +67,12 @@ const TrendingCollection = () => {
                 {/* 3rd */}
                 <div className='pt-5 lg:pt-0'>
                     <figure>
-                        <img className='object-cover  w-full'  src={r1} alt="" />
+                        <img className='object-cover  w-full my-hover-effect'  src={r1} alt="" />
                     </figure>
                     <div className='grid grid-cols-3 gap-2 lg:gap-0 pt-[15px] '>
-                        <img src={r2} alt="" />
-                        <img src={r3} alt="" />
-                        <p className='  bg-[#A259FF] rounded-[20px] text-2xl font-bold flex justify-center items-center'>
+                        <img className='my-hover-effect' src={r2} alt="" />
+                        <img className='my-hover-effect' src={r3} alt="" />
+                        <p className='  bg-[#A259FF] rounded-[20px] text-2xl font-bold flex justify-center items-center my-hover-effect'>
                             1025+
                         </p>
                     </div>

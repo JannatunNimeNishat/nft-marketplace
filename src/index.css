@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-hover{
+
+.my-hover-effect {
+    @apply transition ease-in-out delay-75  hover:scale-95 duration-100;
+}
+
+.btn-hover {
     @apply hover:bg-black hover:text-white;
 }
 
-.my-container{
+.my-container {
     @apply w-full lg:w-[1080px] mx-auto;
 }

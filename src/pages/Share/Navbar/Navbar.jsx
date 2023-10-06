@@ -7,15 +7,28 @@ const Navbar = () => {
     const navItems = <>
         <li>
             <NavLink
-                className={`text-white font-bold hover:text-white transition ease-in-out hover:translate-x-all hover:translate-y-all delay-75 hover:scale-90 duration-200`} to='/marketplace'
+                className={`text-white font-bold hover:text-white
+                my-hover-effect
+                `
+                } to='/marketplace'
+
+            // transition ease-in-out hover:translate-x-all hover:translate-y-all delay-75 hover:scale-90 duration-200
 
             >Marketplace</NavLink>
         </li>
         <li>
-            <NavLink className={`text-white font-bold hover:text-white transition ease-in-out hover:translate-x-all hover:translate-y-all delay-100 hover:scale-90 duration-200`} to='/rankings'>Rankings</NavLink>
+            <NavLink className={`text-white font-bold hover:text-white 
+            
+            my-hover-effect
+            `} to='/rankings'>Rankings</NavLink>
+            {/* transition ease-in-out hover:translate-x-all hover:translate-y-all delay-100 hover:scale-90 duration-200 */}
         </li>
         <li>
-            <NavLink className={`text-white font-bold hover:text-white transition ease-in-out hover:translate-x-all hover:translate-y-all delay-100 hover:scale-90 duration-200`} to='/connect-a-Wallet'>Connect a wallet</NavLink>
+            <NavLink className={`text-white font-bold hover:text-white 
+            
+            my-hover-effect
+            `} to='/connect-a-Wallet'>Connect a wallet</NavLink>
+            {/* transition ease-in-out hover:translate-x-all hover:translate-y-all delay-100 hover:scale-90 duration-200 */}
         </li>
 
     </>
@@ -43,9 +56,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <Link to='/signIn' className="hidden lg:flex btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white
-                 transition ease-in-out delay-75 hover:translate-x-all hover:translate-y-all hover:scale-90 duration-200
-                
+                my-hover-effect
                 ">
+                    {/*  transition ease-in-out delay-75 hover:translate-x-all hover:translate-y-all hover:scale-90 duration-200 */}
                     <img src={user}></img>
                     <p>Sign In</p>
                 </Link>

@@ -16,10 +16,10 @@ const BrowseCategory = () => {
             <div className="pt-12 grid grid-cols-1 lg:grid-cols-4 gap-7">
 
                 {/* 1st */}
-                <motion.div
+              {/*   <motion.div
                 initial={{x:-100}}
                 animate={{x:0, rotate:360}}
-                // animate={{x:0}}
+               
                 transition={{
                     delay:1, 
                     duration:.5,
@@ -31,17 +31,17 @@ const BrowseCategory = () => {
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Art</h3>
                     </div>
-                </motion.div>
+                </motion.div> */}
                
-                {/* <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c1} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Art</h3>
                     </div>
-                </div> */}
+                </div>
 
                 {/* 2nd */}
-                <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c2} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Collectibles</h3>
@@ -49,7 +49,7 @@ const BrowseCategory = () => {
                 </div>
 
                 {/* 3rd */}
-                <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c3} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Music</h3>
@@ -57,7 +57,7 @@ const BrowseCategory = () => {
                 </div>
 
                 {/* 4th */}
-                <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c4} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Photography</h3>
@@ -65,7 +65,7 @@ const BrowseCategory = () => {
                 </div>
 
                 {/* 5th */}
-                <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c5} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Video</h3>
@@ -73,7 +73,7 @@ const BrowseCategory = () => {
                 </div>
 
                 {/* 6th */}
-                <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c6} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Utility</h3>
@@ -81,7 +81,7 @@ const BrowseCategory = () => {
                 </div>
 
                 {/* 7th */}
-                <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c7} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Sport</h3>
@@ -89,7 +89,7 @@ const BrowseCategory = () => {
                 </div>
 
                 {/* 8th */}
-                <div>
+                <div className='my-hover-effect'>
                     <img className=' w-full' src={c8} alt="" />
                     <div className='bg-[#3B3B3B] px-5 py-5 rounded-b-[20px]'>
                         <h3 className='text-[22px] font-semibold'>Virtual Worlds</h3>
