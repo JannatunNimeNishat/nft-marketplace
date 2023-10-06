@@ -8,7 +8,7 @@ import Loading from "../Loading/Loading";
 const Rankings = () => {
     const [activeTab, setActiveTab] = useState(1);
     const [artists, setArtists] = useState([]);
-    const [data, loading, error] = useDataFetching('http://localhost:5000/artists')
+    const [data, loading, error] = useDataFetching('http://localhost:5001/artists')
 
     if (loading) {
         return <Loading />

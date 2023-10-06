@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 
 const TopCreators = () => {
 
-    const [data] = useDataFetching('http://localhost:5000/artists')
+    const [data] = useDataFetching('http://localhost:5001/artists')
    
 
     return (

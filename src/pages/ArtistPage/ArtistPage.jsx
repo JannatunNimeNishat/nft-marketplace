@@ -30,7 +30,7 @@ const ArtistPage = () => {
 
     const artist_id = useParams();
     console.log(artist_id);
-    const [data,loading] = useDataFetching(`http://localhost:5000/artists/${artist_id?.id}`);
+    const [data,loading] = useDataFetching(`http://localhost:5001/artists/${artist_id?.id}`);
     const [activeTab, setActiveTab] = useState(1);
 
     console.log(data);

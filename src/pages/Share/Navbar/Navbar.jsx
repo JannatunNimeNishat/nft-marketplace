@@ -6,15 +6,18 @@ import user from '../../../../public/navbar/user.png'
 const Navbar = () => {
     const navItems = <>
         <li>
-            <NavLink className={'hover:text-white hover:font-semibold'} to='/marketplace' >Marketplace</NavLink>
+            <NavLink
+                className={`text-white font-bold hover:text-white transition ease-in-out hover:translate-x-all hover:translate-y-all delay-75 hover:scale-90 duration-200`} to='/marketplace'
+
+            >Marketplace</NavLink>
         </li>
         <li>
-            <NavLink className={'hover:text-white hover:font-semibold'} to='/rankings'>Rankings</NavLink>
+            <NavLink className={`text-white font-bold hover:text-white transition ease-in-out hover:translate-x-all hover:translate-y-all delay-100 hover:scale-90 duration-200`} to='/rankings'>Rankings</NavLink>
         </li>
         <li>
-            <NavLink className={'hover:text-white hover:font-semibold'} to='/connect-a-Wallet'>Connect a wallet</NavLink>
+            <NavLink className={`text-white font-bold hover:text-white transition ease-in-out hover:translate-x-all hover:translate-y-all delay-100 hover:scale-90 duration-200`} to='/connect-a-Wallet'>Connect a wallet</NavLink>
         </li>
-        
+
     </>
     return (
         <div className="navbar lg:px-10 py-5 ">
@@ -39,11 +42,16 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/signIn' className="hidden lg:flex btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
+                <Link to='/signIn' className="hidden lg:flex btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white
+                 transition ease-in-out delay-75 hover:translate-x-all hover:translate-y-all hover:scale-90 duration-200
+                
+                ">
                     <img src={user}></img>
                     <p>Sign In</p>
                 </Link>
-                <Link to='/signIn' className=" flex  lg:hidden  btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white">
+                <Link to='/signIn' className=" flex  lg:hidden  btn bg-[#A259FF] rounded-[20px] border-0 text-white font-semibold hover:bg-black hover:text-white
+               
+                ">
                     <p>Sign In</p>
                 </Link>
             </div>
