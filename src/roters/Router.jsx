@@ -11,6 +11,7 @@ import Marketplace from "../pages/Marketplace/Marketplace";
 import Rankings from "../pages/Rankings/Rankings";
 import ArtistPage from "../pages/ArtistPage/ArtistPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import NFTpage from "../pages/NFTpage/NFTpage";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         {
           path:'/artist_page/:id',
           element:<ArtistPage></ArtistPage>
+        },
+        {
+          path:'/nft_page/:id',
+          element:<NFTpage/>
         }
       ]
     },

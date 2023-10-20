@@ -1,9 +1,10 @@
 
+import banner_img from '../../assets/nft_page/banner_img.png'
 
 const NFTpage = () => {
     return (
-        <div>
-            <h3>This is nfg page</h3>
+        <div className=''>
+            <img className='w-full h-[550px]' src={banner_img} alt="" />
         </div>
     );
 };

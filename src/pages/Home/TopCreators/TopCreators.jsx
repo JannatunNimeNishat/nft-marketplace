@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom'
 const TopCreators = () => {
 
     const [data] = useDataFetching('http://localhost:5001/artists')
-   
+
 
     return (
         <div className="my-container mt-32 px-5 lg:px-0">
@@ -41,15 +41,16 @@ const TopCreators = () => {
             <div className='mt-14 grid grid-cols-1 lg:grid-cols-4 gap-8'>
 
                 {
-                    data?.map((item, index) => <div
+                    data?.map((item, index) => <Link
+                        to={`/nft_page/${item?._id}`}
                         key={item._id}
-                        className='bg-[#3B3B3B] rounded-[20px] p-5 flex flex-col items-center justify-center relative my-hover-effect'
+                        className='bg-[#3B3B3B] rounded-[20px] p-5 flex flex-col items-center justify-center relative my-hover-effect cursor-pointer'
                     >
                         <img src={item?.artist_img} alt="" />
                         <h3 className='text-[22px] font-semibold pt-5'>{item?.artist_name}</h3>
                         <p><span className='text-[#858584] mr-2'>Total Sales</span>{item?.nfts_sold} ETH</p>
                         <p className='bg-[#2B2B2B] text-[#858584] w-[25px] rounded-full flex items-center justify-center absolute left-5 top-[22px]'>{index + 1}</p>
-                    </div>)
+                    </Link>)
                 }
 
                 {

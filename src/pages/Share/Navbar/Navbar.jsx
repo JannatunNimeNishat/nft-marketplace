@@ -1,9 +1,27 @@
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, json, useNavigate } from 'react-router-dom';
 import logo from '../../../../public/navbar/logo.png'
 import user from '../../../../public/navbar/user.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
+
+    const { logout,checkLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        logout()
+            .then((res) => {
+                const url = new URL(res.url)
+                navigate(url.pathname)
+                /* console.log(res);
+                return res.json() */
+            })
+            .then(data => {
+                console.log(data);
+            })
+    }
+
     const navItems = <>
         <li>
             <NavLink
@@ -12,7 +30,6 @@ const Navbar = () => {
                 `
                 } to='/marketplace'
 
-            // transition ease-in-out hover:translate-x-all hover:translate-y-all delay-75 hover:scale-90 duration-200
 
             >Marketplace</NavLink>
         </li>
@@ -25,10 +42,29 @@ const Navbar = () => {
         </li>
         <li>
             <NavLink className={`text-white font-bold hover:text-white 
-            
+        
             my-hover-effect
             `} to='/connect-a-Wallet'>Connect a wallet</NavLink>
-            {/* transition ease-in-out hover:translate-x-all hover:translate-y-all delay-100 hover:scale-90 duration-200 */}
+
+        </li>
+        {/* -------------- */}
+        <li>
+            <NavLink className={`text-white font-bold hover:text-white 
+        
+            my-hover-effect
+            `} to='#'
+                onClick={handleLogout}
+            >Logout</NavLink>
+
+        </li>
+        <li>
+            <NavLink className={`text-white font-bold hover:text-white 
+        
+            my-hover-effect
+            `} to='#'
+                onClick={checkLogin}
+            >check login</NavLink>
+
         </li>
 
     </>
